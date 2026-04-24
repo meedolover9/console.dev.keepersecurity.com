@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subdomain Takeover PoC</title>
+    <style>
+        body { font-family: monospace; background: #0a0e27; color: #00ff00; text-align: center; padding: 50px; }
+        .box { border: 2px solid #00ff00; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; }
+        .proof { background: #1a1f3a; padding: 15px; margin: 20px 0; text-align: left; }
+        .danger { color: #ff4444; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🔴 SUBDOMAIN TAKEOVER</h1>
+        <h2>Keeper Security - Proof of Concept</h2>
+        <div class="proof">
+            <p>$ dig console.dev.keepersecurity.com @8.8.8.8</p>
+            <p>;; status: <span class="danger">NXDOMAIN</span></p>
+            <p>✅ Successfully claimed this subdomain via GitHub Pages</p>
+            <p>📅 Date: <span id="date"></span></p>
+        </div>
+        <p><strong>This vulnerability requires immediate remediation.</strong></p>
+    </div>
+    <script>document.getElementById('date').innerText = new Date().toUTCString();</script>
+</body>
+</html>
